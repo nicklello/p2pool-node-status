@@ -14,13 +14,13 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <script src="js/jquery-2.0.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-dateFormat.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js"></script>
 
     <script src="js/highcharts.js"></script>
     <script src="js/exporting.js"></script>
@@ -218,9 +218,7 @@
     // Check if we shall remotely connect to a p2pool running somewhere
 
     if(config.host && config.host.length > 0) {
-      api_url= jsonp + '&host=' + encodeURI(config.host) + '&report=';
-      $('#node').removeClass('hidden').text(config.host);
-      $('#_node').removeClass('hidden');
+        api_url = config.host;
     }
 
     // ==================================================================
