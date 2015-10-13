@@ -55,7 +55,7 @@
 
   <body>
     <div id='ribbon' style='display:none;'>
-      <a href="https://github.com/johndoe75/p2pool-node-status">
+      <a href="https://github.com/nicklello/p2pool-node-status">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="img/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
       </a>
     </div>
@@ -156,7 +156,6 @@
         </tr>
       </table>
 
-<!--
       <h4>Pool Shares</h4>
       <table id='recent_shares' class="table table-hover">
         <tr>
@@ -166,7 +165,6 @@
           <th width='20%' class='text-right'>Confirmations</th>
         </tr>
       </table>
- -->
 
       <h4>Recent blocks</h4>
       <table id='recent_blocks' class="table table-hover">
@@ -183,13 +181,12 @@
       <div class='container'>
         <hr>
         <p class='text-center'>
-          Interface by johndoe75
+          Interface by nicklello (based on code from johndoe75)
           &dash;
-          <a href="https://github.com/johndoe75/p2pool-node-status.git">https://github.com/johndoe75/p2pool-node-status.git</a>
+          <a href="https://github.com/nicklello/p2pool-node-status.git">https://github.com/nicklello/p2pool-node-status.git</a>
         </p>
         <p class='text-center'>
-          Donate some coins, if you like it <code>1MzFr1eKzLEC1tuoZ7URMB7WWBMgHKimKe</code>
-          (<i class='fa fa-btc'></i>) or <code>LSRfZJf75MtwzrbAUfQgqzdK4hHpY4oMW3</code> (LTC)
+          Donate some coins, if you like it <code>1MPTLVzs6nirbM31pEm5No9dAwBzMdgtsh</code> (<i class='fa fa-btc'></i>)
         </p>
       </div>
     </div>
@@ -502,6 +499,7 @@
                 $.getJSON(api_url + '/global_stats', function(data) {
                   if(data) global_stats= data;
                   $(document).trigger('update_miners');
+                  $(document).trigger('update_shares');
                   $(document).trigger('update_time');
                 });
               });
